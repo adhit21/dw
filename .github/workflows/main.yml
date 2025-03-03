@@ -1,0 +1,22 @@
+name: Download File Example
+
+on:
+  workflow_dispatch: # biar bisa dijalankan manual dari GitHub UI
+
+jobs:
+  download_file:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download file dari URL
+        run: |
+          curl -L -o downloaded-file.zip https://bigota.d.miui.com/V13.0.2.0.SMOCNXM/miui_RUBY_V13.0.2.0.SMOCNXM_147dfbf93c_12.0.zip
+
+      - name: Simpan file ke artifact (opsional)
+        uses: actions/upload-artifact@v4
+        with:
+          name: downloaded-file
+          path: downloaded-file.zip
