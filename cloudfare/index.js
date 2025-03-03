@@ -5,7 +5,7 @@ export default {
     let url = urlParams.get('url');
 
     if (!get || !url) {
-      return new Response("\nMissing parameters!\n\nUsage: \ncurl fce.offici5l.workers.dev?get=<boot_img|settings_apk|init_boot_img>&url=<url>\n\nExample:\n curl fce.offici5l.workers.dev?get=boot_img&url=https://example.com/file.zip\n\n", { status: 400 });
+      return new Response("\nMissing parameters!\n\nUsage: \ncurl dw.nanalegends353.workers.dev?get=<boot_img|settings_apk|init_boot_img>&url=<url>\n\nExample:\n curl dw.nanalegends353.workers.dev?get=boot_img&url=https://example.com/file.zip\n\n", { status: 400 });
     }
 
     if (get !== "boot_img" && get !== "settings_apk" && get !== "init_boot_img") {
@@ -49,7 +49,7 @@ export default {
 
     const fileName = url.split('/').pop();
     const combinedBasename = `${get}_${fileName}`;
-    const finalUrl = `https://github.com/offici5l/Firmware-Content-Extractor/releases/download/${get}/${combinedBasename}`;
+    const finalUrl = `https://github.com/adhit21/dw/releases/download/${get}/${combinedBasename}`;
 
     const headers = {
       "Authorization": `token ${env.GTKK}`,
@@ -58,7 +58,7 @@ export default {
       "User-Agent": "Cloudflare Worker"
     };
 
-    const BaseUrl = "https://api.github.com/repos/offici5l/Firmware-Content-Extractor/actions/workflows/FCE.yml";
+    const BaseUrl = "https://api.github.com/repos/adhit21/dw/actions/workflows/FCE.yml";
 
     const githubDispatchUrl = `${BaseUrl}/dispatches`;
     const TRACK_URL = `${BaseUrl}/runs`;
