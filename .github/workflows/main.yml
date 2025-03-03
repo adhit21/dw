@@ -13,7 +13,7 @@ jobs:
 
       - name: Download file dari URL
         run: |
-          curl -L -o downloaded-file.zip https://bigota.d.miui.com/V13.0.2.0.SMOCNXM/miui_RUBY_V13.0.2.0.SMOCNXM_147dfbf93c_12.0.zip
+          curl -L -o downloaded-file.zip https://hugeota.d.miui.com/V13.0.2.0.SMOCNXM/miui_RUBY_V13.0.2.0.SMOCNXM_147dfbf93c_12.0.zip
 
       - name: Simpan file ke artifact (opsional)
         uses: actions/upload-artifact@v4
