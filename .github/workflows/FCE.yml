@@ -13,7 +13,7 @@ on:
 env:
   GET: ${{ github.event.inputs.get }}
   URL: ${{ github.event.inputs.url }}
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
 
 jobs:
   FCE:
